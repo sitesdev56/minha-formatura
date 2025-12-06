@@ -1,0 +1,370 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: #0a0e1a;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Layout Utilities */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.space-y-12 > * + * {
+  margin-top: 3rem;
+}
+
+/* Stars Animation */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle var(--duration, 3s) infinite;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Float Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-letter {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-letter {
+  display: inline-block;
+  animation: float-letter 3s ease-in-out infinite;
+}
+
+/* Logo Styles */
+.logo-container {
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+}
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.6));
+}
+
+/* Title Styles */
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #3b82f6;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #60a5fa;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* Card Styles */
+.card {
+  background: rgba(24, 30, 48, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 1rem;
+  padding: 3rem;
+  box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.2);
+}
+
+.card-header {
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  height: 4px;
+  width: 6rem;
+  background: #3b82f6;
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+.card-content {
+  color: #a1a8c0;
+  font-size: 1.125rem;
+}
+
+.ceremony-info {
+  margin-bottom: 2rem;
+}
+
+.ceremony-title {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.ceremony-year {
+  color: #60a5fa;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.info-block {
+  padding: 1rem;
+}
+
+.info-label {
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.info-value {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.info-detail {
+  color: #a1a8c0;
+  font-size: 1rem;
+}
+
+.quote-section {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  margin-top: 1.5rem;
+}
+
+.quote-text {
+  color: #ffffff;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.quote-author {
+  color: #a1a8c0;
+  font-size: 0.875rem;
+}
+
+.card-footer {
+  padding-top: 1.5rem;
+}
+
+.confirm-button {
+  background: #3b82f6;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.confirm-button:hover {
+  background: #2563eb;
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.5);
+  transform: scale(1.05);
+}
+
+.footer-note {
+  color: #a1a8c0;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+/* Footer Message */
+.footer-message {
+  padding-top: 2rem;
+}
+
+.footer-text {
+  color: #60a5fa;
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.footer-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.decoration-line {
+  height: 1px;
+  width: 3rem;
+  background: rgba(59, 130, 246, 0.5);
+}
+
+.decoration-star {
+  color: #3b82f6;
+  font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .logo-container {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .main-title {
+    font-size: 4.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.875rem;
+  }
+
+  .card-title {
+    font-size: 2.5rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-title {
+    font-size: 6rem;
+  }
+}
